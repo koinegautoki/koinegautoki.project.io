@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css);
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {
+	height: 100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #AEB0B5;	/*全体の文字色*/
+	font-family:'しっぽり明朝', serif;
+	font-size: 16px;	/*文字サイズ*/
+	/*行間*/
+	background: #2A2E33;	/*背景色*/
+}
+h1,h2,h3,h4,h5,p,ul,li {
+	font-size: 100%;
+	font-weight: normal;
+}
+img {
+	border: none;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #AEB0B5;		/*リンクテキストの色*/
+	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+
+/*ヘッダー
+---------------------------------------------------------------------------*/
+header {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	background: url("../images/main2.jpg") no-repeat center center / cover;
+	text-align: center;
+}
+header #title {
+	writing-mode: vertical-rl;
+	display: inline-block;
+	margin-top: 5%;
+	font-size: 30px;
+	color: #AEB0B5;
+	letter-spacing: 0.18em;
+	border-top: 3px double #AEB0B5;
+	border-bottom: 3px double #AEB0B5;
+	padding: 10px;
+}
+
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体への指定*/
+#menubar {
+	position: absolute;
+	bottom: 10%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	left: 0px;
+	width: 100%;
+	text-align: center;
+}
+/*メニュー１個あたりの指定*/
+#menubar li {
+	position: relative;
+	display: inline-block;
+	margin: 0 3%;
+	font-size: 20px;
+	text-decoration: none;
+	outline: none;
+}
+#menubar li a:hover::before {
+	content: '';
+	position: absolute;
+	left: 30%;
+	bottom: 0%;
+	border: 1px solid #AEB0B5;
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	opacity: 1;
+	animation: 1s circleanime2 forwards;
+}
+@keyframes circleanime2{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+#menubar li a {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	width: 150px;	/*メニューの幅*/
+	color: #AEB0B5;	/*文字色*/
+	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
+	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+}
+
+/*コンテンツ（上のcontainerの中のブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	overflow: hidden;
+	padding: 50px 3%;
+	max-width: 1400px;	/*最大幅。これ以上広くならない指定。*/
+	margin: 0 auto;
+}
+#contents section + section {
+	padding-top: 50px;
+}
+/*コンテンツ内にあるh2(見出し)タグの指定*/
+#contents h2 {
+	margin-bottom: 50px;
+	clear: both;
+	padding: 0 20px;
+	font-weight: bold;
+	font-size: 20px;		/*文字サイズ*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くする指定*/
+	background: #141920;		/*背景色*/
+	color: #AEB0B5;			/*文字色*/
+	border-radius: 100px;	/*角を丸くする指定。大きめであれば適当で構いません。*/
+}
+/*コンテンツ内にあるp(段落)タグ設定*/
+#contents h3 {
+	padding: 5px 50px;	
+}
+
+/*Aboutページ
+---------------------------------------------------------------------------*/
+#about h3{
+	margin-left: 5%;
+	line-height: 2;	
+}
+
+/*Workページ
+---------------------------------------------------------------------------*/
+#work .list {
+	width: 25%;		/*幅。今は３列ですが、25%に変更すれば4列になります。*/
+	float: left;	/*左に回り込み*/
+	background: #141920;
+	margin-bottom: 50px;
+}
+#work .list a img {
+	opacity: 0.5;	/*透明度50%。*/
+}
+/*マウスオン時の画像の設定*/
+#work .list a:hover img {
+	opacity: 1;		/*色が100%ついた状態*/
+}
+
+/*Artistページ
+---------------------------------------------------------------------------*/
+#artist h2{
+	margin-top: 50px;
+}
+#artist .list_{
+	display: flex;
+	align-items: center;
+	line-height: 1.5;
+	border-bottom: 1px solid #AEB0B5;
+	padding: 20px;
+}
+/*１番目のlistブロックへの追加指定。上に線を入れる。*/
+#artist .list_:first-of-type {
+	border-top: 1px solid #AEB0B5;
+}
+#artist .list_ img{
+	width: 16%;
+	float: left;
+	margin: 2% 5% 2% 18%;
+}
+#artist .list_ h4 {
+	font-size: 20px;	
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;
+	color: #AEB0B5;		/*文字色*/
+	font-size: 85%;		/*文字サイズ*/
+	padding: 3% 0 2% 0;
+}
+footer a {
+	color: #AEB0B5;	/*リンクテキストの文字色*/
+	text-decoration: none;
+}
+footer a:hover {
+	color: #AEB0B5;	/*マウスオン時の文字色*/
+}
+footer .pr {
+	display: block;
+	font-size: 80%;
+}
