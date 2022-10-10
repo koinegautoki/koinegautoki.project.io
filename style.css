@@ -145,6 +145,14 @@ header #title {
 
 /*Workページ
 ---------------------------------------------------------------------------*/
+#work h3{
+	margin-bottom: 50px;
+	clear: both;
+	padding: 0 20px;
+	font-size: 18px;
+	text-align: center;
+	color: #AEB0B5;	
+}
 #work .list {
 	width: 25%;		/*幅。今は３列ですが、25%に変更すれば4列になります。*/
 	float: left;	/*左に回り込み*/
