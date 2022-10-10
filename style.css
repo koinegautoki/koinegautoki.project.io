@@ -143,27 +143,31 @@ header #title {
 	line-height: 2;	
 }
 
-/*Workページ
+/*Worksページ
 ---------------------------------------------------------------------------*/
-#work h3{
+#works h3{
 	margin-bottom: 50px;
 	clear: both;
 	padding: 0 20px;
 	font-size: 18px;
 	text-align: center;
 	color: #AEB0B5;	
+	letter-spacing: 0.2em;
+	border-bottom: 1px solid #AEB0B5;
+	padding-bottom: 10px;
+	
 }
-#work .list {
+#works .list {
 	width: 25%;		/*幅。今は３列ですが、25%に変更すれば4列になります。*/
 	float: left;	/*左に回り込み*/
 	background: #141920;
 	margin-bottom: 50px;
 }
-#work .list a img {
+#works .list a img {
 	opacity: 0.5;	/*透明度50%。*/
 }
 /*マウスオン時の画像の設定*/
-#work .list a:hover img {
+#works .list a:hover img {
 	opacity: 1;		/*色が100%ついた状態*/
 }
 
